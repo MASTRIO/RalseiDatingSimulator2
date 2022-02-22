@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="default.png" />
+  </ItemGroup>
+  <ItemGroup Label="RalseiConversationAI">
+    <None Include="RalseiConversationAI.consumption.cs">
+      <DependentUpon>RalseiConversationAI.mbconfig</DependentUpon>
+    </None>
+    <None Include="RalseiConversationAI.training.cs">
+      <DependentUpon>RalseiConversationAI.mbconfig</DependentUpon>
+    </None>
+    <None Include="RalseiConversationAI.zip">
+      <DependentUpon>RalseiConversationAI.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
