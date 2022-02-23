@@ -1,0 +1,5 @@
+# stuff
+/bin/
+/obj/Debug/
+/obj/publish/
+/obj/Release/
