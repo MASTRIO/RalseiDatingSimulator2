@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Ralsei Dating Simulator ⭐2⭐" Height="450" Width="550">
     <Grid Background="Black">
-        <Image x:Name="RalseiFace" HorizontalAlignment="Left" Height="134" Margin="42,250,0,0" VerticalAlignment="Top" Width="133" Source="/default.png" RenderTransformOrigin="0.5,0.5" Stretch="Uniform">
+        <Image x:Name="RalseiFace" HorizontalAlignment="Left" Height="134" Margin="42,202,0,0" VerticalAlignment="Top" Width="133" Source="/default.png" RenderTransformOrigin="0.5,0.5" Stretch="Uniform">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,10 +17,22 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Rectangle x:Name="OutputBox" HorizontalAlignment="Left" Height="90" Margin="186,273,0,0" Stroke="White" VerticalAlignment="Top" Width="326" OpacityMask="#FF1D1D1D" Fill="#FF0E0E0E" RadiusX="10" RadiusY="10"/>
-        <Label x:Name="OutputText" Content="Hello! :3" HorizontalAlignment="Left" Margin="186,273,0,0" VerticalAlignment="Top" Height="90" Width="326" Foreground="White" FontSize="18"/>
-        <TextBox x:Name="EnterText" HorizontalAlignment="Left" Margin="45,44,0,0" Text="Say something to Ralsei" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="90" Background="#FF151515" BorderBrush="White" FontSize="16" Foreground="White" TextAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="EnterText_Focused"/>
-        <Button x:Name="SendInput" Content="Speak thy words" HorizontalAlignment="Left" Margin="45,154,0,0" VerticalAlignment="Top" Height="34" Width="467" Background="#FF252525" BorderBrush="White" Foreground="White" FontSize="14" Click="ProcessInput"/>
+        <Rectangle x:Name="OutputBox" HorizontalAlignment="Left" Height="90" Margin="186,225,0,0" Stroke="White" VerticalAlignment="Top" Width="326" OpacityMask="#FF1D1D1D" Fill="#FF0E0E0E" RadiusX="10" RadiusY="10"/>
+        <Label x:Name="OutputText" Content="Hello! :3" HorizontalAlignment="Left" Margin="186,225,0,0" VerticalAlignment="Top" Height="90" Width="326" Foreground="White" FontSize="18"/>
+        <TextBox x:Name="EnterText" HorizontalAlignment="Left" Margin="45,25,0,0" Text="Say something to Ralsei" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="90" Background="#FF151515" BorderBrush="White" FontSize="16" Foreground="White" TextAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="EnterText_Focused"/>
+        <Button x:Name="SendInput" Content="Speak thy words" HorizontalAlignment="Left" Margin="45,140,0,0" VerticalAlignment="Top" Height="34" Width="467" Background="#FF252525" BorderBrush="White" Foreground="White" FontSize="14" Click="ProcessInput"/>
+        <Button x:Name="YeahGoodAnswer" Content="Good Answer" HorizontalAlignment="Left" Margin="194,335,0,0" VerticalAlignment="Top" Height="48" Width="127" Background="#FF272727" BorderBrush="#FF23FF00" Foreground="#FF23FF00" Click="GoodAnswer_Clicked"/>
+        <Button x:Name="NoBadAnswer" Content="Bad Answer" HorizontalAlignment="Left" Margin="373,335,0,0" VerticalAlignment="Top" Height="48" Width="127" Background="#FF272727" BorderBrush="Red" Foreground="Red" Click="BadAnswer_Clicked"/>
+        <Rectangle x:Name="DialogBackground" HorizontalAlignment="Left" Height="285" Margin="65,0,0,0" Stroke="#FF707070" VerticalAlignment="Center" Width="408" Fill="White" RadiusX="10" RadiusY="10" StrokeThickness="5" Visibility="Hidden">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Label x:Name="DialogTitle" Content="Title" HorizontalAlignment="Left" Margin="73,68,0,0" VerticalAlignment="Top" Width="390" Height="33" FontSize="20" Background="{x:Null}" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="DialogContent" HorizontalAlignment="Left" Margin="75,99,0,0" VerticalAlignment="Top" Height="207" Width="388" FontSize="14" Visibility="Hidden"/>
+        <Button x:Name="DialogClose" Content="OK" HorizontalAlignment="Left" Margin="353,312,0,0" VerticalAlignment="Top" Height="24" Width="107" Click="DialogClose_Clicked" Visibility="Hidden"/>
+        <TextBox x:Name="DialogInput" HorizontalAlignment="Left" Margin="77,247,0,0" Text="Enter correct answer" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" Height="58" FontSize="16" Background="#FFE8E8E8" BorderBrush="Black" SelectionBrush="#FFC5E5FF" TextAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Visibility="Hidden"/>
+        <Button x:Name="RebuildPipelineButton" Content="Rebuild Pipeline" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Height="24" Width="107" Background="#FF3C3C3C" Foreground="White" BorderBrush="White" Click="RebuildPipeline_Clicked"/>
 
     </Grid>
 </Window>
